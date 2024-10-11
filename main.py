@@ -51,6 +51,7 @@ async def upload(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
+    file_name, ext = os.path.splitext(os.path.basename(x))
         
 
     path = f"./downloads/{m.chat.id}"
