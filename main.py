@@ -149,7 +149,7 @@ async def upload(bot: Client, m: Message):
                         url = re.search(r"(https://.*?playlist.m3u8.*?)\"", text).group(1)
 
             elif 'master.mpd' in url:
-                 url = "https://dl-api.jarviss.workers.dev/?v=" + url.replace('/master.mpd', '&quality=') + raw_text2
+                 url = "https://api-solo-one.vercel.app/api/pw?url=" + url + "&quality=" + raw_text2
             
           
             elif 'videos.classplusapp' in url:
